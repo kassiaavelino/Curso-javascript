@@ -9,20 +9,15 @@ Código condição de pagamento:
   4 - Acima de duas vezes, preço normal da etiqueta mais jutos de 10%;
 */
 
-const precoProduto = 100;
-const formaPagamento = 4;
-
-
-if (formaPagamento === 1) {
-    console.log((precoProduto - (precoProduto * 0.10)))
-
-} else if (formaPagamento === 2) {
-    console.log((precoProduto - (precoProduto * 0.15)))
-
-} else if (formaPagamento === 3) {
-    console.log(precoProduto)
-
-} else {
-    const valorProdutoCréditoJuros =
-        console.log((precoProduto + (precoProduto * 0.1)))
+function aplicarDesconto(precoProduto, formaPagamento) {
+    if (formaPagamento === 1) {
+        return((precoProduto - (precoProduto * 0.10)).toFixed(2))
+    } else if (formaPagamento === 2) {
+        return((precoProduto - (precoProduto * 0.15)).toFixed(2))
+    } else if (formaPagamento === 3) {
+        return((precoProduto).toFixed(2));
+    } else {
+        return((precoProduto + (precoProduto * 0.1)).toFixed(2));
+    }
 }
+aplicarDesconto(159.90, 4);
